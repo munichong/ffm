@@ -4,10 +4,13 @@ package ffm;
  * @author chenhuang
  *
  */
-public class FFMNode {
-	// field_num
+public class FFMNode { 
+	/**
+	 * Each value of a field, i.e., feature value, has one FFMNode.
+	 */
+	// field_num; cw87: field_index?
 	public int f;
-	// feature_num
+	// feature_num; cw87: feature_index?
 	public int j;
 	// value
 	public float v;

@@ -18,6 +18,9 @@ public class FFMParameter {
 	// randomization training order of samples
 	public boolean random;
 	
+	public boolean hrchyReg;
+	public float C;
+	
 	public static FFMParameter defaultParameter() {
 		FFMParameter parameter = new FFMParameter();
 		parameter.eta = 0.1f;
@@ -26,6 +29,10 @@ public class FFMParameter {
 		parameter.k = 4;
 		parameter.normalization = true;
 		parameter.random = true;
+		
+		parameter.C = 0.1f;
+		parameter.hrchyReg = true;
+		
 		return parameter;
 	}
 	
@@ -33,6 +40,6 @@ public class FFMParameter {
 	public String toString() {
 		return "FFMParameter [eta=" + eta + ", lambda=" + lambda + ", n_iters="
 				+ n_iters + ", k=" + k + ", normalization=" + normalization
-				+ ", random=" + random + "]";
+				+ ", random=" + random + ", hierarchicalRegularization=" + hrchyReg + "]";
 	}	
 }
